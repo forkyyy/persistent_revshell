@@ -73,7 +73,7 @@ func handleConnection(conn net.Conn) {
 			return
 		}
 
-		cmd := exec.Command("/bin/bash", "-c", command)
+		cmd := exec.Command("/bin/sh", "-c", command)
 		cmd.Stdout = writer
 		cmd.Stderr = writer
 		cmd.Run()
